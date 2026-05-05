@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1">
+        <title>Attack of the Radioactive Thing - Spelling Bee</title>
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+        <!-- Style Sheet -->
+        <link rel="stylesheet" href="../../main.css">
+    </head>
+
+    <body class="bg-grad">
+        
+        <div class="container text-center">
+                        
+            
+            <div class="row">
+                <!-- Navigation Tabs -->       
+                <div class="row">
+                    <nav class="navbar fixed-top bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">
+                                <img src="../../logo_transparent_smaller.png" alt="ZombieSlayaMr Logo" width="32" height="32">
+                            </a>
+                                
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    
+                                    <!-- Home -->
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="../../index.html">Home</a>
+                                    </li>
+
+                                    <!-- Shaolin Shuffle Tools -->
+                                    <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Shaolin Shuffle
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Mahjong Tile Solver</a></li>                                                                       
+                                    </ul>
+                                    </li>
+
+
+                                    <!-- Attack of the Radioactive Thing -->
+                                    <li class="nav-item dropdown">
+                                    <a class="nav-link active dropdown-toggle" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <b>Attack of the Radioactive Thing</b>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="aotrt_chemical.html">Chemical Step Solver</a></li>
+                                        <li><a class="dropdown-item" href="aotrt_spelling_bee.html"><b>Spelling Bee Solver</b></a></li>                                    
+                                    </ul>
+                                    </li>
+
+                                    <!-- Beast from Beyond -->
+                                    <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Beast from Beyond
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Floppy Disk Cheat sheet</a></li>
+                                        <li><a class="dropdown-item" href="#">Odd One Out Cheat Sheet</a></li>                                    
+                                        <li><a class="dropdown-item" href="#">Eight Queens Solver</a></li>
+                                        <li><a class="dropdown-item" href="#">Venom Upgrade Solver</a></li>
+                                    </ul>
+                                    </li>
+                                </ul>                    
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- Explanation Panel -->
+                <div class="row g-4 pt-5">
+                    <div class="col d-flex justify-content-center">
+                        <div class="card shadow-lg border-dark border-3 rounded-4 text-start" style="width: 125rem;">
+                            <div class="card-body justify-content-left">                                
+                                <h3 class="card-title text-center">Spelling Bee Cipher Solver!</h3>                                
+                                <h6 class="card-subtitle text-center mb-2 text-body-secondary">Skull Hop Step 4</h6>    
+                                <br>                            
+                                <p class="card-text">
+                                    During the fourth step for the Skull Hop Ghost N' Skulls Easter Egg, you'll be presented with a cipher that you'll need to solve to progress. This tool will solve
+                                    that entire step for you as long as you enter the information in correctly.
+                                    <br><br>
+                                    To use the tool, simply enter the word from the wall on the Ice Cream Parlor. Then from LEFT TO RIGHT (Left being the symbol closest to Slappy Taffy) Enter each symbol
+                                    near the swing sets.
+                                    <br><br>
+                                    Once you've selected your word and symbols, the space below Solution will populate with the solution you can use in game :)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tool Panel -->
+                <div class="row g-4 pb-5">
+                    <div class="col d-flex justify-content-center">
+                        <div class="card shadow-lg border-dark border-3 rounded-4 text-start" style="width: 125rem;">
+                            <div class="card-body justify-content-left"> 
+                                
+                                <!-- Solution Space-->
+                                <div>
+                                    <h4>Solution</h4>
+                                    <img id="s1" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s2" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s3" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s4" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s5" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s6" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s7" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s8" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s9" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s10" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s11" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s12" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s13" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s14" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s15" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s16" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s17" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s18" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s19" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s20" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s21" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s22" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s23" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s24" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s25" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s26" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s27" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s28" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s29" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s30" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s31" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s32" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s33" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s34" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s35" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s36" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s37" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s38" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s39" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s40" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s41" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s42" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s43" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s44" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s45" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s46" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s47" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s48" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s49" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s50" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s51" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s52" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s53" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s54" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s55" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s56" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s57" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s58" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s59" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s60" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s61" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s62" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s63" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                    <img id="s64" alt src="../../imgs/symbol_blank_space.png" class="sol">
+                                </div>
+
+                                <!-- Word Select -->
+                                <div>
+                                    <h4>Choose your Word</h4> <!-- Probably gonna change these to look better than just text later. -->
+                                    <br>
+                                    <p>
+                                        <a id="0" onclick="setWord(0)" class="word-select">aldehydes</a>
+                                        <a id="1" onclick="setWord(1)" class="word-select">allomer</a>
+                                        <a id="2" onclick="setWord(2)" class="word-select">benzene</a>
+                                        <a id="3" onclick="setWord(3)" class="word-select">chlorination</a>
+                                        <a id="4" onclick="setWord(4)" class="word-select">ethers</a>
+                                        <a id="5" onclick="setWord(5)" class="word-select">ethyl</a>
+                                        <a id="6" onclick="setWord(6)" class="word-select">hydrogenation</a>
+                                        <a id="7" onclick="setWord(7)" class="word-select">neutrino</a>
+                                        <a id="8" onclick="setWord(8)" class="word-select">nitriles</a>                                    
+                                        <a id="9" onclick="setWord(9)" class="word-select">oxidation</a>
+                                        <a id="10" onclick="setWord(10)" class="word-select">reduction</a>
+                                        <a id="11" onclick="setWord(11)" class="word-select">solvolysis</a>
+                                        <a id="12" onclick="setWord(12)" class="word-select">sublimation</a>
+                                        <a id="13" onclick="setWord(13)" class="word-select">zwitterion</a>                                        
+                                    </p>
+                                </div>
+
+                                <br>
+
+                                <!-- First Symbol -->
+                                <div>
+                                    <h4>First Symbol (Closest to Slappy Taffy)</h4>
+                                    <img id="1a" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/red/SymbolA.png" onclick='setLetter(1, "a")' alt="A-Selected" class="selected">
+                                    <img id="1b" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolB.png" onclick='setLetter(1, "b")' alt="B">
+                                    <img id="1c" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolC.png" onclick='setLetter(1, "c")' alt="C">
+                                    <img id="1d" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolD.png" onclick='setLetter(1, "d")' alt="D">
+                                    <img id="1e" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolE.png" onclick='setLetter(1, "e")' alt="E">
+                                    <img id="1f" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolF.png" onclick='setLetter(1, "f")' alt="F">
+                                    <img id="1g" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolG.png" onclick='setLetter(1, "g")' alt="G">
+                                    <img id="1h" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolH.png" onclick='setLetter(1, "h")' alt="H">
+                                    <img id="1i" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolI.png" onclick='setLetter(1, "i")' alt="I">
+                                    <img id="1j" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolJ.png" onclick='setLetter(1, "j")' alt="J">
+                                    <img id="1k" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolK.png" onclick='setLetter(1, "k")' alt="K">
+                                    <img id="1l" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolL.png" onclick='setLetter(1, "l")' alt="L">
+                                    <img id="1m" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolM.png" onclick='setLetter(1, "m")' alt="M">
+                                    <img id="1n" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolN.png" onclick='setLetter(1, "n")' alt="N">
+                                    <img id="1o" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolO.png" onclick='setLetter(1, "o")' alt="O">
+                                    <img id="1p" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolP.png" onclick='setLetter(1, "p")' alt="P">
+                                    <img id="1q" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolQ.png" onclick='setLetter(1, "q")' alt="Q">
+                                    <img id="1r" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolR.png" onclick='setLetter(1, "r")' alt="R">
+                                    <img id="1s" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolS.png" onclick='setLetter(1, "s")' alt="S">
+                                    <img id="1t" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolT.png" onclick='setLetter(1, "t")' alt="T">
+                                    <img id="1u" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolU.png" onclick='setLetter(1, "u")' alt="U">
+                                    <img id="1v" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolV.png" onclick='setLetter(1, "v")' alt="V">
+                                    <img id="1w" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolW.png" onclick='setLetter(1, "w")' alt="W">
+                                    <img id="1x" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolX.png" onclick='setLetter(1, "x")' alt="X">
+                                    <img id="1y" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolY.png" onclick='setLetter(1, "y")' alt="Y">
+                                    <img id="1z" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolZ.png" onclick='setLetter(1, "z")' alt="Z">                                                                
+                                </div>
+
+                                <br><br>
+
+                                <!-- Second Symbol -->
+                                <div>
+                                    <h4>Second Symbol</h4>
+                                    <img id="2a" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/red/SymbolA.png" onclick='setLetter(2, "a")' alt="A-Selected" class="selected">
+                                    <img id="2b" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolB.png" onclick='setLetter(2, "b")' alt="B">
+                                    <img id="2c" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolC.png" onclick='setLetter(2, "c")' alt="C">
+                                    <img id="2d" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolD.png" onclick='setLetter(2, "d")' alt="D">
+                                    <img id="2e" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolE.png" onclick='setLetter(2, "e")' alt="E">
+                                    <img id="2f" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolF.png" onclick='setLetter(2, "f")' alt="F">
+                                    <img id="2g" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolG.png" onclick='setLetter(2, "g")' alt="G">
+                                    <img id="2h" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolH.png" onclick='setLetter(2, "h")' alt="H">
+                                    <img id="2i" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolI.png" onclick='setLetter(2, "i")' alt="I">
+                                    <img id="2j" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolJ.png" onclick='setLetter(2, "j")' alt="J">
+                                    <img id="2k" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolK.png" onclick='setLetter(2, "k")' alt="K">
+                                    <img id="2l" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolL.png" onclick='setLetter(2, "l")' alt="L">
+                                    <img id="2m" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolM.png" onclick='setLetter(2, "m")' alt="M">
+                                    <img id="2n" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolN.png" onclick='setLetter(2, "n")' alt="N">
+                                    <img id="2o" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolO.png" onclick='setLetter(2, "o")' alt="O">
+                                    <img id="2p" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolP.png" onclick='setLetter(2, "p")' alt="P">
+                                    <img id="2q" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolQ.png" onclick='setLetter(2, "q")' alt="Q">
+                                    <img id="2r" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolR.png" onclick='setLetter(2, "r")' alt="R">
+                                    <img id="2s" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolS.png" onclick='setLetter(2, "s")' alt="S">
+                                    <img id="2t" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolT.png" onclick='setLetter(2, "t")' alt="T">
+                                    <img id="2u" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolU.png" onclick='setLetter(2, "u")' alt="U">
+                                    <img id="2v" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolV.png" onclick='setLetter(2, "v")' alt="V">
+                                    <img id="2w" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolW.png" onclick='setLetter(2, "w")' alt="W">
+                                    <img id="2x" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolX.png" onclick='setLetter(2, "x")' alt="X">
+                                    <img id="2y" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolY.png" onclick='setLetter(2, "y")' alt="Y">
+                                    <img id="2z" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolZ.png" onclick='setLetter(2, "z")' alt="Z">
+                                </div>
+
+                                <br><br>
+
+                                <!-- Third Symbol -->
+                                <div>
+                                    <h4>Third Symbol</h4>
+                                    <img id="3a" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/red/SymbolA.png" onclick='setLetter(3, "a")' alt="A-Selected" class="selected">
+                                    <img id="3b" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolB.png" onclick='setLetter(3, "b")' alt="B">
+                                    <img id="3c" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolC.png" onclick='setLetter(3, "c")' alt="C">
+                                    <img id="3d" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolD.png" onclick='setLetter(3, "d")' alt="D">
+                                    <img id="3e" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolE.png" onclick='setLetter(3, "e")' alt="E">
+                                    <img id="3f" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolF.png" onclick='setLetter(3, "f")' alt="F">
+                                    <img id="3g" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolG.png" onclick='setLetter(3, "g")' alt="G">
+                                    <img id="3h" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolH.png" onclick='setLetter(3, "h")' alt="H">
+                                    <img id="3i" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolI.png" onclick='setLetter(3, "i")' alt="I">
+                                    <img id="3j" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolJ.png" onclick='setLetter(3, "j")' alt="J">
+                                    <img id="3k" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolK.png" onclick='setLetter(3, "k")' alt="K">
+                                    <img id="3l" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolL.png" onclick='setLetter(3, "l")' alt="L">
+                                    <img id="3m" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolM.png" onclick='setLetter(3, "m")' alt="M">
+                                    <img id="3n" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolN.png" onclick='setLetter(3, "n")' alt="N">
+                                    <img id="3o" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolO.png" onclick='setLetter(3, "o")' alt="O">
+                                    <img id="3p" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolP.png" onclick='setLetter(3, "p")' alt="P">
+                                    <img id="3q" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolQ.png" onclick='setLetter(3, "q")' alt="Q">
+                                    <img id="3r" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolR.png" onclick='setLetter(3, "r")' alt="R">
+                                    <img id="3s" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolS.png" onclick='setLetter(3, "s")' alt="S">
+                                    <img id="3t" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolT.png" onclick='setLetter(3, "t")' alt="T">
+                                    <img id="3u" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolU.png" onclick='setLetter(3, "u")' alt="U">
+                                    <img id="3v" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolV.png" onclick='setLetter(3, "v")' alt="V">
+                                    <img id="3w" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolW.png" onclick='setLetter(3, "w")' alt="W">
+                                    <img id="3x" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolX.png" onclick='setLetter(3, "x")' alt="X">
+                                    <img id="3y" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolY.png" onclick='setLetter(3, "y")' alt="Y">
+                                    <img id="3z" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolZ.png" onclick='setLetter(3, "z")' alt="Z">                                                                
+                                </div>
+
+                                <br><br>
+
+                                <!-- Fourth Symbol -->
+                                <div>
+                                    <h4>Fourth Symbol (Closest to the Ice Cream Parlor)</h4>
+                                    <img id="4a" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/red/SymbolA.png" onclick='setLetter(4, "a")' alt="A-Selected" class="selected">
+                                    <img id="4b" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolB.png" onclick='setLetter(4, "b")' alt="B">
+                                    <img id="4c" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolC.png" onclick='setLetter(4, "c")' alt="C">
+                                    <img id="4d" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolD.png" onclick='setLetter(4, "d")' alt="D">
+                                    <img id="4e" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolE.png" onclick='setLetter(4, "e")' alt="E">
+                                    <img id="4f" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolF.png" onclick='setLetter(4, "f")' alt="F">
+                                    <img id="4g" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolG.png" onclick='setLetter(4, "g")' alt="G">
+                                    <img id="4h" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolH.png" onclick='setLetter(4, "h")' alt="H">
+                                    <img id="4i" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolI.png" onclick='setLetter(4, "i")' alt="I">
+                                    <img id="4j" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolJ.png" onclick='setLetter(4, "j")' alt="J">
+                                    <img id="4k" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolK.png" onclick='setLetter(4, "k")' alt="K">
+                                    <img id="4l" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolL.png" onclick='setLetter(4, "l")' alt="L">
+                                    <img id="4m" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolM.png" onclick='setLetter(4, "m")' alt="M">
+                                    <img id="4n" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolN.png" onclick='setLetter(4, "n")' alt="N">
+                                    <img id="4o" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolO.png" onclick='setLetter(4, "o")' alt="O">
+                                    <img id="4p" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolP.png" onclick='setLetter(4, "p")' alt="P">
+                                    <img id="4q" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolQ.png" onclick='setLetter(4, "q")' alt="Q">
+                                    <img id="4r" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolR.png" onclick='setLetter(4, "r")' alt="R">
+                                    <img id="4s" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolS.png" onclick='setLetter(4, "s")' alt="S">
+                                    <img id="4t" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolT.png" onclick='setLetter(4, "t")' alt="T">
+                                    <img id="4u" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolU.png" onclick='setLetter(4, "u")' alt="U">
+                                    <img id="4v" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolV.png" onclick='setLetter(4, "v")' alt="V">
+                                    <img id="4w" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolW.png" onclick='setLetter(4, "w")' alt="W">
+                                    <img id="4x" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolX.png" onclick='setLetter(4, "x")' alt="X">
+                                    <img id="4y" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolY.png" onclick='setLetter(4, "y")' alt="Y">
+                                    <img id="4z" onmouseover="moused(id)" onmouseout="unmoused(id)" src="../../imgs/cipher_symbols_sb/black/SymbolZ.png" onclick='setLetter(4, "z")' alt="Z">                                                                
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Add the Script that runs this tool -->
+        <script src="aotrt_spelling_bee.js"></script>
+
+        <!-- Bootstrap -->        
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>        
+    </body>
+</html>
+
