@@ -42,7 +42,7 @@ function unmoused(id) {
 function setLetter(pos, letter) {    
     changeSymbolColor(document.getElementById("" + pos + letters[pos-1].toLowerCase()), letters[pos-1], "black", false);
     letters[pos-1] = letter.toUpperCase();
-    changeSymbolColor(document.getElementById("" + pos + letter), letter, "red", true);
+    changeSymbolColor(document.getElementById("" + pos + letter), letter.toUpperCase(), "red", true);
 
     if (currentlySetWord != 1) {
         solveCipher();
