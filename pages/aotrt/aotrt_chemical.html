@@ -9,6 +9,9 @@
         <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+        <!-- Boostrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/>
+
         <!-- Style Sheet -->
         <link rel="stylesheet" href="../../main.css">
     </head>
@@ -44,7 +47,8 @@
                                         Shaolin Shuffle
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Mahjong Tile Solver</a></li>                                                                       
+                                        <li><a class="dropdown-item" href="#">Mahjong Tile Solver</a></li>
+                                        <li><a class="dropdown-item" href="#">Word Step Cheat Sheet</a></li>
                                     </ul>
                                     </li>
 
@@ -93,11 +97,20 @@
                                 <h6 class="card-subtitle text-center mb-2 text-body-secondary">Main Easter Egg</h6>    
                                 <br>                            
                                 <p class="card-text">
-                                    Definitely one of the most complicated zombies easter egg steps, but this tool will make it extremely easy. 
+                                    Definitely one of the most complicated zombies easter egg steps, but this tool will make it extremely easy.                                 
+                                    This tool takes some of the information found from the speedrunning community to make it so that the tool needs 
+                                    a fraction of the information most tools have you enter.
                                     <br><br>
-                                    Explain how to use the tool here.
+                                    <b>Step 1</b>, you'll enter your M number (found near the pool in the small building) and the Top number of Elvira's TV (the one that says < X).
+                                    This, in most cases, will calculate your O number just from this, preventing you from having to do the arduous task of finding the O number manually.
+                                    It will also choose the color you need to view the chem boards in.
                                     <br><br>
-                                    solution explanation.
+                                    <b>Step 2</b> will have you switch to the color given and look at the Chem board directly outside the TV Station. You'll give the tool the sum of the top and left
+                                    numbers for Acetaldehyde. In some cases, you'll also need to give the sum of the top and left numbers for Glycerol. From those numbers, it will determine all of 
+                                    your chemical numbers without you having to go and manually collect them.
+                                    <br><br>
+                                    <b>Step 3</b> simply has you enter your bomb chemical gathered from listening to the radio. Then it will display the formulas needed to create the chemicals to create
+                                    your bomb chemical, as well as the numbers you need to punch in to the chemical station!
                                 </p>
                             </div>
                         </div>
@@ -111,7 +124,8 @@
                             <div class="card-body justify-content-left">
                                     
                                 <!-- Step 1: Get the M Number and Lower Bound from the User -->
-                                <h5><b>Step 1: M Number and Lower Bound</b></h5>
+                                <div id="step1Panel">
+                                <h5><b>Step 1: M Number and Lower Bound</b></h5><hr>
                                 <form id="step1Form">                                                                        
                                     <div class="form-group row">
                                         <label for="inputMNumber" class="col-sm-2 col-form-label ">
@@ -121,10 +135,13 @@
                                         </label>
 
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control w-25" id="inputMNumber" placeholder="TTT Number">
+                                            <input type="number" min="1" max="50" step="1" class="form-control w-25" id="inputMNumber" placeholder="TTT Number">
                                             <small id="MNumberHelp" class="form-text text-muted">
                                                 M number is found near the pool. If it's equal to 1, there may be some extra steps you need to do...
                                             </small>
+                                            <div id="MNumberError" hidden><small class="form-text text-danger">
+                                                <b>Please enter a valid TTT number</b>
+                                            </small></div>
                                         </div>
                                     </div>
 
@@ -136,48 +153,65 @@
                                             TV Lower Bound 
                                         </label>
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control w-25" id="inputTVLowerBound" placeholder="Lower Bound Number (< X)">
+                                            <input type="number" min="1" max="500" step="1" class="form-control w-25" id="inputTVLowerBound" placeholder="Lower Bound Number (< X)">
                                             <small id="LowerBoundNumberHelp" class="form-text text-muted">
-                                                    Look for the number on the Top of Elvira's TV. 
+                                                Look for the number on the Top of Elvira's TV. 
                                             </small>
+                                            <div id="EyeNumberError" hidden><small class="form-text text-danger">
+                                                <b>Please enter a valid Lower Bound number</b>
+                                            </small></div>
                                         </div>
                                     </div>
 
                                     <br>
 
                                     <!-- Handle Edge Case when M number = 1 -->
-                                    <div class="form-group row" hidden>
+                                    <div class="form-group row" id="ONumberField" hidden>
                                         <label for="inputONumber" class="col-sm-2 col-form-label">
                                             <img src="../../imgs/aotrt_chemical/o_number.png" alt="O symbol for Attack" class="w-25 h-100">
                                             O Number
                                         </label>
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control w-25" id="inputONumber" placeholder="O Number">
-                                            <small id="ONumberHelp" class="form-text text-muted">
-                                                    Unforunately there's multiple O numbers that could be correct. You'll need to enter your O number to continue.
+                                            <input type="number" min="1" max="500" step="1" class="form-control w-25" id="inputONumber" placeholder="O Number">
+                                            <small id="ONumberHelp" class="form-text px-2 bg-warning rounded-3 text-muted">
+                                                <b>Unforunately there's multiple O numbers that could be correct. You'll need to enter your O number to continue.</b>
                                             </small>
+                                            <div id="ONumberError" hidden><small class="form-text text-danger">
+                                                <b>Please enter a valid O Number.</b>
+                                            </small></div>
                                         </div>
                                     </div>
 
                                     <br>
 
-                                    <!-- Next Step Button -->
-                                    <div class="form-group row">
-                                        <div class="col-sm-10">
-                                        <button type="submit" class="btn btn-success" id="form1Submit">Next Step</button>
+                                    <div class="btn-group" role="group" aria-label="Action Buttons">
+                                        <!-- Next Step Button -->
+                                        <div class="form-group row" id="form1SubmitGroup">
+                                            <div>
+                                            <button type="button" class="btn btn-success me-2" id="form1Submit" onclick="determineONumber()">Next Step</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Reset Buttons -->
+                                        <div class="form-group row" id="form1ResetButton">
+                                            <div >
+                                            <button type="button" class="btn btn-danger" id="form1Reset" onclick="resetForm1()">Reset Step 1</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </form>
+                                </div>
 
-                                <br>                            
+                                                          
 
                                 <!-- Step 2: Get the Chemical Numbers using Acetaldehyde and Glycerol -->
-                                <h5><b>Step 2: Chemical Numbers</b></h5><hr>
+                                <div id="step2Panel" hidden>
+                                <br><h5><b>Step 2: Chemical Numbers</b></h5><hr>
                                 <img src="../../imgs/aotrt_chemical/o_number.png" alt="O symbol for Attack" width="50" height="50">
-                                <span id="ONumberDisplayed">O Number = -1</span> <br>
+                                <span class="badge rounded-pill bg-dark fs-6" id="ONumberDisplayed">O Number = -1</span><br>                                
 
                                 <img src="../../imgs/aotrt_chemical/eye_number.png" alt="Eye symbol for Attack" width="50" height="50">
-                                <span id="EyeColorDisplayed">Eye Color = x</span> <br>
+                                <span class="badge rounded-pill bg-dark fs-6" id="EyeColorDisplayed">Eye Color = x</span> <br>
 
                                 <form id="Step2Form">
                                     <div class="form-group row" id="step2Explained">
@@ -186,10 +220,10 @@
                                         </label>   
                                         <span id="step2Explained">
                                             <p><b><i>
-                                            Using your color given above, view the chemical board outside the TV Station. Get the top and left numbers on the
-                                            chemical <u>"Acetaldehyde"</u> and add them together. Input the sum below.
+                                            Using your color given above, view the chemical board outside the TV Station. Get the top and left numbers
+                                            on the chemical <u>"Acetaldehyde"</u> and add them together. Input the sum below.
                                             </p></b></i>
-                                        </span>                             
+                                        </span>             
                                     </div>
 
                                     <br>
@@ -199,57 +233,145 @@
                                             Acetaldehyde Number
                                         </label>
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control w-25" id="inputAcetaldehydeNumber" placeholder="Result of Top + Left">
+                                            <input type="number" min="1" max="100" step="1" class="form-control w-25" id="inputAcetaldehydeNumber" placeholder="Result of Top + Left">
                                             <small id="AcetaldehydeNumberHelp" class="form-text text-muted">
                                                     On the Board outside the TV Station. Put the result of summing the Top & Left Numbers from your color.
                                             </small>
+                                            <div id="acetaldehydeNumberError" hidden><small class="form-text text-danger">
+                                                <b>Please enter a valid number for Acetaldehyde</b>
+                                            </small></div>
                                         </div>
                                     </div>
                                     
                                     <br>
 
-                                    <div class="form-group row">
+                                    <div class="form-group row" id="glycerolSection" hidden>
                                         <label for="inputGlycerolNumber" class="col-sm-2 col-form-label">                                            
                                             Glycerol Number
                                         </label>
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control w-25" id="inputGlycerolNumber" placeholder="Result of Top + Left">
-                                            <small id="GlycerolNumberHelp" class="form-text text-muted">
-                                                    Unforunately couldn't determine chemicals from just Acetaldehyde. Input Glycerol's Number as well...
+                                            <input type="number" min="1" max="100" step="1" class="form-control w-25" id="inputGlycerolNumber" placeholder="Result of Top + Left">                                            
+                                            <small id="GlycerolNumberHelp" class="form-text px-2 bg-warning rounded-3 text-muted">
+                                                    <b>Unforunately couldn't determine chemicals from just Acetaldehyde. Input Glycerol's Number as well...</b>
                                             </small>
+                                            <div id="glycerolNumberError" hidden><small class="form-text text-danger">
+                                                <b>Please enter a valid number for Glycerol</b>
+                                            </small></div>
                                         </div>
+                                    </div>
+
+                                    <br>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                                        <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                        </symbol>
+                                        <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                                        </symbol>
+                                        <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                        </symbol>
+                                    </svg>
+
+                                    <div id="noChemicalError" hidden>
+                                        <div class="alert alert-danger d-flex align-items-center" role="alert" hidden>
+                                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                                            <div>
+                                                <b>The Glycerol and/or Acetaldehyde numbers given do not produce any values to compute the ingredient numbers correctly. Please check
+                                                to ensure you've input both numbers correctly.</b>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <br>
+
+                                    <div class="btn-group" role="group" aria-label="Action Buttons">
+                                        <div class="form-group row">
+                                            <div>
+                                            <button type="button" class="btn btn-success me-2" id="form2Submit" onclick="determineIngredientNumbers()">Next Step</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Reset Buttons -->
+                                        <div class="form-group row" id="form1ResetButton">
+                                            <div >
+                                            <button type="button" class="btn btn-danger me-2" id="form2Reset" onclick="resetForm2()">Reset Step 2</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row" id="form2ResetAllButton">
+                                            <div >
+                                            <button type="button" class="btn btn-danger" id="form2ResetAll" onclick="resetAll()"><b>Reset All</b></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                </div>                
+                                
+                                <div id="step3Panel" hidden>
+                                <br><h5><b>Step 3: Bomb Chemical and Solution</b></h5><hr>                    
+                                <form>
+                                    <div class="form-group row" id="step3Explained">
+                                        <label for="step2Explained" class="col-sm-2 col-form-label">                                        
+                                            
+                                        </label>   
+                                        <span id="step2Explained">
+                                            <p><b><i>
+                                            Select your chemical for the bomb gotten from the radio you repair with the battery and as long as
+                                            all the other information is complete, a soultion will be generated below!
+                                            </p></b></i>
+                                        </span>
                                     </div>
 
                                     <br>
 
                                     <div class="form-group row">
                                         <label for="inputBombChemical" class="col-sm-2 col-form-label">Bomb Compound</label>
-                                        <select class="form-control w-50">
-                                            <option diabled selected hidden>Select One...</option>
+                                        <select class="form-control w-50" id="inputBombChemical">
+                                            <option disabled selected hidden>Select One...</option>
                                             <option>3,4 Di-Nitroxy-Methyl-Propane</option>
                                             <option>1,3,5 Tera-Nitra-Phenol</option>
-                                            <option>3-Meythl-2,4-di-nitrobenzene</option>
-                                            <option>Octa-hydro 2,5-nitro 3,4,7-para-zokine</option>
-                                            <option>2,4-propane 3,5-tetra-nitrite</option>
+                                            <option>3-Methyl 2,4 Di-Nitrobenzene</option>
+                                            <option>Octa-Hydro 2,5 Nitro 3,4,7 Para-Zokine</option>
+                                            <option>2,4 Propane 3,5 Tetra-Nitrite</option>                                        
                                         </select>
+                                        <div id="bombChemicalError" hidden><small class="form-text text-danger">
+                                            <b>Choose a value for the Bomb Chemical, it can't be the default...</b>
+                                        </small></div>
+                                        
                                     </div>
-
                                     <br>
 
-                                    <div class="form-group row">
-                                        <div class="col-sm-10">
-                                        <button type="submit" class="btn btn-success">Next Step</button>
+                                    <div class="card border border-5 border-success">
+                                        <div class="card-body" id="bombSolutionBox">
+                                                                           
+                                        </div>
+                                    </div><br><br>
+
+                                    <div class="btn-group" role="group" aria-label="Action Buttons">
+                                        <div class="form-group row">
+                                            <div>
+                                            <button type="button" class="btn btn-success me-2" id="form3Submit" onclick="getBombChemicalSolution()">Calculate Solution</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row" id="form3ResetAllButton">
+                                            <div >
+                                            <button type="button" class="btn btn-danger" id="form3ResetAll" onclick="resetAll()"><b>Reset All</b></button>
+                                            </div>
                                         </div>
                                     </div>
                                 </form>
-
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
+
+        <script src="aotrt_chemical.js"></script>
              
         <!-- Bootstrap -->        
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
