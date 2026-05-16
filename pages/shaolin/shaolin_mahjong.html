@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1">
+        <title>ZombieSlayaMr's Infinite Warfare Tools</title>
+        <link rel="icon" type="image/x-icon" href="../../favicon.png">
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+        <!-- Style Sheet -->
+        <link rel="stylesheet" href="../../main.css">
+    </head>
+
+    <body class="bg-grad">
+        
+        <div class="container text-center">
+            
+            <!-- Landing Page Header -->
+            <div class="row">
+                <!-- Navigation Panel Goes here... -->
+                <div class="row">
+                    <nav class="navbar fixed-top bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">
+                                <img src="../../imgs/Logo/zs_logo.png" alt="ZombieSlayaMr Logo" width="32" height="32">
+                            </a>
+                                
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    
+                                    <!-- Home (May change this later to something else) -->
+                                    <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
+                                    </li>
+
+                                    <!-- Shaolin Shuffle Tools -->
+                                    <li class="nav-item dropdown">
+                                    <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <b>Shaolin Shuffle</b>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#"><b>Mahjong Tile Solver</b></a></li>
+                                        <li><a class="dropdown-item" href="#">Word Step Cheat Sheet</a></li>                                                                  
+                                    </ul>
+                                    </li>
+
+
+                                    <!-- Attack of the Radioactive Thing -->
+                                    <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Attack of the Radioactive Thing
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="../aotrt/aotrt_chemical.html">Chemical Step Solver</a></li>
+                                        <li><a class="dropdown-item" href="../aotrt/aotrt_spelling_bee.html">Spelling Bee Solver</a></li>                                    
+                                    </ul>
+                                    </li>
+
+                                    <!-- Beast from Beyond -->
+                                    <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Beast from Beyond
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Floppy Disk Cheat sheet</a></li>
+                                        <li><a class="dropdown-item" href="#">Odd One Out Cheat Sheet</a></li>                                    
+                                        <li><a class="dropdown-item" href="#">Eight Queens Solver</a></li>
+                                        <li><a class="dropdown-item" href="#">Venom Upgrade Solver</a></li>
+                                    </ul>
+                                    </li>
+                                </ul>
+                                
+                                <ul class="nav navbar-nav ml-auto justify-content-end">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="../changelog/changelog.html">Changelog</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- Content Here -->
+                <div class="row g-4 pt-5">
+                    <div class="col d-flex justify-content-center">
+                        <div class="card shadow-lg border-dark border-3 rounded-4 text-start" style="width: 125rem;">
+                            <div class="card-body justify-content-left">                                
+                                <h3 class="card-title text-center">Shaolin Shuffle Mahjong Solver</h3>
+                                <h6 class="card-subtitle text-center mb-2 text-body-secondary">Skull Buster Step 2</h6>
+                                <br>                            
+                                <p class="card-text">
+                                    This is a tool I've notoriously have had to replace many times on my guides and thankfully with this tool, that will no longer be the case.
+                                    <br><br>
+                                    To use the tool, select the tiles you have in game using the tiles at the top of the tool panel. Each selection will appear in the Selected Tiles section. 
+                                    If you make a mistake, you can click the tile in the Selected Tiles section to remove it. Once all 14 tiles have been added, it will attempt to find a solution.
+                                    If one is found, then it will flip to the Solution display and show you how to organize the Mahjong tiles in game to complete the step.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tool Panel -->
+                <div class="row g-4 pb-5">
+                    <div class="col d-flex justify-content-center">
+                        <div class="card shadow-lg border-dark border-3 rounded-4 text-start" style="width: 125rem;">                        
+                            <div class="card-body justify-content-center">
+                                
+                                <!-- Mahjong Selector -->
+                                <div id="MahjongTileSelect">
+                                    <div class="d-flex flex-nowrap justify-content-center overflow-auto">
+                                        <img class="border border-3 border-dark rounded-3 me-2 shadow-sm" width="75" height="112.5" id="1_tile" alt="Mahjong Tile with 1 dots" onmouseover="mousedSelector(id)" onmouseout="unmousedSelector(id)" onclick="addTile(id)" src="../../imgs/mahjong_tiles/1_tile.png">
+                                        <img class="border border-3 border-dark rounded-3 me-2 shadow-sm" width="75" height="112.5" id="2_tile" alt="Mahjong Tile with 2 dots" onmouseover="mousedSelector(id)" onmouseout="unmousedSelector(id)" onclick="addTile(id)" src="../../imgs/mahjong_tiles/2_tile.png">
+                                        <img class="border border-3 border-dark rounded-3 me-2 shadow-sm" width="75" height="112.5" id="3_tile" alt="Mahjong Tile with 3 dots" onmouseover="mousedSelector(id)" onmouseout="unmousedSelector(id)" onclick="addTile(id)" src="../../imgs/mahjong_tiles/3_tile.png">
+                                        <img class="border border-3 border-dark rounded-3 me-2 shadow-sm" width="75" height="112.5" id="4_tile" alt="Mahjong Tile with 4 dots" onmouseover="mousedSelector(id)" onmouseout="unmousedSelector(id)" onclick="addTile(id)" src="../../imgs/mahjong_tiles/4_tile.png">
+                                        <img class="border border-3 border-dark rounded-3 me-2 shadow-sm" width="75" height="112.5" id="5_tile" alt="Mahjong Tile with 5 dots" onmouseover="mousedSelector(id)" onmouseout="unmousedSelector(id)" onclick="addTile(id)" src="../../imgs/mahjong_tiles/5_tile.png">
+                                    </div>
+                                    <br><hr><br><br>
+                                </div>
+                            
+                                <!-- Selected Tiles Section -->
+                                <div id="MahjongSelected">
+                                    <h3 style="text-align: center;">Selected Tiles</h3><br>
+                                    <div class="d-flex flex-wrap justify-content-center" style="row-gap: 7.5px;">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="selected_tile_1" alt="emptyTileSelected" onmouseover="mousedSelected(id)" onmouseout="unmousedSelected(id)" onclick="removeTile(id, 0)" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="selected_tile_2" alt="emptyTileSelected" onmouseover="mousedSelected(id)" onmouseout="unmousedSelected(id)" onclick="removeTile(id, 1)" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="selected_tile_3" alt="emptyTileSelected" onmouseover="mousedSelected(id)" onmouseout="unmousedSelected(id)" onclick="removeTile(id, 2)" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="selected_tile_4" alt="emptyTileSelected" onmouseover="mousedSelected(id)" onmouseout="unmousedSelected(id)" onclick="removeTile(id, 3)" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="selected_tile_5" alt="emptyTileSelected" onmouseover="mousedSelected(id)" onmouseout="unmousedSelected(id)" onclick="removeTile(id, 4)" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="selected_tile_6" alt="emptyTileSelected" onmouseover="mousedSelected(id)" onmouseout="unmousedSelected(id)" onclick="removeTile(id, 5)" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="selected_tile_7" alt="emptyTileSelected" onmouseover="mousedSelected(id)" onmouseout="unmousedSelected(id)" onclick="removeTile(id, 6)" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="selected_tile_8" alt="emptyTileSelected" onmouseover="mousedSelected(id)" onmouseout="unmousedSelected(id)" onclick="removeTile(id, 7)" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="selected_tile_9" alt="emptyTileSelected" onmouseover="mousedSelected(id)" onmouseout="unmousedSelected(id)" onclick="removeTile(id, 8)" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="selected_tile_10" alt="emptyTileSelected" onmouseover="mousedSelected(id)" onmouseout="unmousedSelected(id)" onclick="removeTile(id, 9)" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="selected_tile_11" alt="emptyTileSelected" onmouseover="mousedSelected(id)" onmouseout="unmousedSelected(id)" onclick="removeTile(id, 10)" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="selected_tile_12" alt="emptyTileSelected" onmouseover="mousedSelected(id)" onmouseout="unmousedSelected(id)" onclick="removeTile(id, 11)" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="selected_tile_13" alt="emptyTileSelected" onmouseover="mousedSelected(id)" onmouseout="unmousedSelected(id)" onclick="removeTile(id, 12)" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="selected_tile_14" alt="emptyTileSelected" onmouseover="mousedSelected(id)" onmouseout="unmousedSelected(id)" onclick="removeTile(id, 13)" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                    </div>
+                                </div>
+
+                                <!-- Solution Display -->
+                                <div id="MahjongSolution" hidden>
+                                    <h2 style="text-align: center;">Solution</h2>
+                                    <p style="text-align: center;">Place the tiles in this orientation and the step will be completed!</p>
+                                    <br>
+                                    <div class="d-flex flex-wrap justify-content-center" style="row-gap: 7.5px;">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="solution_tile_1" alt="Empty Mahjong Tile" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="solution_tile_2" alt="Empty Mahjong Tile" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-4" width="75" height="112.5" id="solution_tile_3" alt="Empty Mahjong Tile" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="solution_tile_4" alt="Empty Mahjong Tile" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="solution_tile_5" alt="Empty Mahjong Tile" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-4" width="75" height="112.5" id="solution_tile_6" alt="Empty Mahjong Tile" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="solution_tile_7" alt="Empty Mahjong Tile" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="solution_tile_8" alt="Empty Mahjong Tile" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-4" width="75" height="112.5" id="solution_tile_9" alt="Empty Mahjong Tile" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="solution_tile_10" alt="Empty Mahjong Tile" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="solution_tile_11" alt="Empty Mahjong Tile" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-4" width="75" height="112.5" id="solution_tile_12" alt="Empty Mahjong Tile" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="solution_tile_13" alt="Empty Mahjong Tile" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                        <img class="border border-3 border-secondary rounded-3 me-2" width="75" height="112.5" id="solution_tile_14" alt="Empty Mahjong Tile" src="../../imgs/mahjong_tiles/blank_tile.png">
+                                    </div>
+                                </div>
+
+                                <br><br>
+
+                                <div class="d-flex flex-wrap justify-content-center" id="resetButtonDiv">
+                                    <button type="button" class="btn btn-danger" style="width:500px;" onclick="resetTool()"><b>Reset Tool</b></button>
+                                </div>
+                            </div>                                                        
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Tool Script -->
+        <script src="shaolin_mahjong.js"></script>
+             
+        <!-- Bootstrap -->        
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>        
+    </body>
+</html>
+
