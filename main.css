@@ -32,3 +32,28 @@ a.word-select:hover {
     text-decoration: underline;
     cursor: pointer;
 }
+
+.chess-square {            
+    width: 75px;    
+    height: 75px;
+    aspect-ratio: 1/1;
+    padding: 0;    
+}
+
+.chess-square-light {
+    background:#eeeed2;
+}
+
+.chess-square-dark {
+    background:#769656;
+}
+
+.chess-square-light:hover {
+    background:#eeeed2;    
+    border: 2px solid black;
+}
+
+.chess-square-dark:hover {
+    background:#769656;
+    border: 2px solid black;    
+}
