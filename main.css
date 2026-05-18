@@ -34,8 +34,8 @@ a.word-select:hover {
 }
 
 .chess-square {            
-    width: 55px;    
-    height: 55px;
+    width: 75px;    
+    height: 75px;
     aspect-ratio: 1/1; 
 }
 

@@ -21,6 +21,7 @@ var solutionLists = [
     '83162574', '84136275'
 ];
 var isSolutionCurrentlyShowing = false;
+var chessSquareSize = 75;
 
 
 function chooseStarting(row, column) {
@@ -84,4 +85,34 @@ function clearDisplay() {
     }
 
     isSolutionCurrentlyShowing = false;
+}
+
+function changeBoardSize(upOrDown) {
+    switch(upOrDown) {
+        case 0: // Increase size (up to 75)
+            if (chessSquareSize < 75) {
+                chessSquareSize += 10;
+                setBoardSize(chessSquareSize);
+            }
+            break;
+        case 1: // decrease size (down to 45)
+            if (chessSquareSize > 35) {
+                chessSquareSize -= 10;
+                setBoardSize(chessSquareSize);
+            }
+            break;
+        default:
+            break;
+    }
+}
+
+function setBoardSize(size) {
+    for(let i = 1; i <= 8; i++) {
+        for(let j = 1; j <= 8; j++) {
+            var currentElement = document.getElementById(`${i}${j}`);
+
+            currentElement.style.width = `${chessSquareSize}px`;
+            currentElement.style.height = `${chessSquareSize}px`;
+        }
+    }
 }
