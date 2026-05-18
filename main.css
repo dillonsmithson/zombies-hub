@@ -34,26 +34,25 @@ a.word-select:hover {
 }
 
 .chess-square {            
-    width: 75px;    
-    height: 75px;
-    aspect-ratio: 1/1;
-    padding: 0;    
+    width: 55px;    
+    height: 55px;
+    aspect-ratio: 1/1; 
 }
 
 .chess-square-light {
-    background:#eeeed2;
+    background: #e6daee;
 }
 
 .chess-square-dark {
-    background:#769656;
+    background: #9a7db7;
 }
 
 .chess-square-light:hover {
-    background:#eeeed2;    
+    background: #e6daee; 
     border: 2px solid black;
 }
 
 .chess-square-dark:hover {
-    background:#769656;
+    background: #9a7db7;
     border: 2px solid black;    
 }

@@ -91,124 +91,136 @@
                         <div class="card shadow-lg border-dark border-3 rounded-4 text-start" style="width: 125rem;">
                             <div class="card-body justify-content-left">                                
                                 <h3 class="card-title text-center">Eight Queens Solver</h3>
-                                <h6 class="card-subtitle text-center mb-2 text-body-secondary">Skull Breaker Step 4</h6>
+                                <h6 class="card-subtitle text-center mb-2 text-body-secondary">Skull Breaker Step 5</h6>
                                 <br>                            
                                 <p class="card-text">
-                                    This is a tool I've notoriously have had to replace many times on my guides and thankfully with this tool, that will no longer be the case.
+                                    This tool is used during the Skull breaker easter egg in Beast From Beyond. During the step, you'll be presented with a chess board with
+                                    one queen piece already on the board. The step tasks you with finding 7 pieces around the map, then placing them to solve the famous
+                                    8 queens puzzle.
                                     <br><br>
-                                    To use the tool, select the tiles you have in game using the tiles at the top of the tool panel. Each selection will appear in the Selected Tiles section. 
-                                    If you make a mistake, you can click the tile in the Selected Tiles section to remove it. Once all 14 tiles have been added, it will attempt to find a solution.
-                                    If one is found, then it will flip to the Solution display and show you how to organize the Mahjong tiles in game to complete the step.
+                                    To use the tool, you first need to be viewing the chessboard in game from the correct angle. <b>Standing at the edge of the table, where the chessboard is, and
+                                    with the chairs surrounding the table on the left and right side of you, view the board from behind the left chair. (Look for the color of the squares, the 
+                                    light color square will be in the left corner)</b> From here, note the starting position of the first queen. Then hit solve and the tool will show you how to
+                                    place the queens on the board in game. 
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="row g-4 pt-5">
+                <div class="row g-4 pb-5">
                     <div class="col d-flex justify-content-center">
                         <div class="card shadow-lg border-dark border-3 rounded-4 text-start" style="width: 125rem;"><br>
-                            <div class="d-flex flex-column flex-nowrap justify-content-center overflow-auto mx-3">
+                            <div class="d-flex flex-column flex-nowrap justify-content-start overflow-auto mx-3">
                                 <div class="d-flex justify-content-center flex-nowrap">
-                                    <button id="11" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;">
+                                    <button id="11" onclick="chooseStarting(1, 1)" type="button" class="btn rounded-0 chess-square chess-square-light">
                                         <img src="../../imgs/queen_piece.png" class="img-fluid">
                                     </button>                                        
-                                    <button id="12" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="13" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="14" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="15" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="16" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="17" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="18" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
+                                    <button id="12" onclick="chooseStarting(1, 2)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="13" onclick="chooseStarting(1, 3)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="14" onclick="chooseStarting(1, 4)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="15" onclick="chooseStarting(1, 5)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="16" onclick="chooseStarting(1, 6)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="17" onclick="chooseStarting(1, 7)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="18" onclick="chooseStarting(1, 8)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
                                 </div>                         
                                 <div class="d-flex justify-content-center flex-nowrap">
-                                    <button id="21" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="22" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="23" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="24" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="25" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="26" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="27" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="28" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
+                                    <button id="21" onclick="chooseStarting(2, 1)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="22" onclick="chooseStarting(2, 2)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="23" onclick="chooseStarting(2, 3)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="24" onclick="chooseStarting(2, 4)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="25" onclick="chooseStarting(2, 5)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="26" onclick="chooseStarting(2, 6)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="27" onclick="chooseStarting(2, 7)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="28" onclick="chooseStarting(2, 8)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
                                 </div>
 
                                 <div class="d-flex justify-content-center flex-nowrap">
-                                    <button id="31" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="32" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="33" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="34" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="35" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="36" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="37" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="38" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
+                                    <button id="31" onclick="chooseStarting(3, 1)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="32" onclick="chooseStarting(3, 2)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="33" onclick="chooseStarting(3, 3)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="34" onclick="chooseStarting(3, 4)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="35" onclick="chooseStarting(3, 5)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="36" onclick="chooseStarting(3, 6)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="37" onclick="chooseStarting(3, 7)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="38" onclick="chooseStarting(3, 8)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
                                 </div>
 
                                 <div class="d-flex justify-content-center flex-nowrap">
-                                    <button id="41" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="42" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="43" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="44" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="45" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="46" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="47" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="48" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
+                                    <button id="41" onclick="chooseStarting(4, 1)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="42" onclick="chooseStarting(4, 2)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="43" onclick="chooseStarting(4, 3)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="44" onclick="chooseStarting(4, 4)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="45" onclick="chooseStarting(4, 5)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="46" onclick="chooseStarting(4, 6)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="47" onclick="chooseStarting(4, 7)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="48" onclick="chooseStarting(4, 8)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
                                 </div>
 
                                 <div class="d-flex justify-content-center flex-nowrap">
-                                    <button id="51" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="52" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="53" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="54" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="55" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="56" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="57" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="58" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
+                                    <button id="51" onclick="chooseStarting(5, 1)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="52" onclick="chooseStarting(5, 2)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="53" onclick="chooseStarting(5, 3)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="54" onclick="chooseStarting(5, 4)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="55" onclick="chooseStarting(5, 5)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="56" onclick="chooseStarting(5, 6)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="57" onclick="chooseStarting(5, 7)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="58" onclick="chooseStarting(5, 8)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
                                 </div>
 
 
                                 <div class="d-flex justify-content-center flex-nowrap">
-                                    <button id="61" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="62" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="63" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="64" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="65" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="66" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="67" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="68" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
+                                    <button id="61" onclick="chooseStarting(6, 1)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="62" onclick="chooseStarting(6, 2)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="63" onclick="chooseStarting(6, 3)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="64" onclick="chooseStarting(6, 4)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="65" onclick="chooseStarting(6, 5)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="66" onclick="chooseStarting(6, 6)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="67" onclick="chooseStarting(6, 7)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="68" onclick="chooseStarting(6, 8)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
                                 </div>
 
                                 <div class="d-flex justify-content-center flex-nowrap">
-                                    <button id="71" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="72" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="73" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="74" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="75" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="76" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="77" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="78" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
+                                    <button id="71" onclick="chooseStarting(7, 1)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="72" onclick="chooseStarting(7, 2)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="73" onclick="chooseStarting(7, 3)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="74" onclick="chooseStarting(7, 4)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="75" onclick="chooseStarting(7, 5)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="76" onclick="chooseStarting(7, 6)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="77" onclick="chooseStarting(7, 7)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="78" onclick="chooseStarting(7, 8)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
                                 </div>
                                 
                                 <div class="d-flex justify-content-center flex-nowrap">
-                                    <button id="81" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="82" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="83" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="84" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="85" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="86" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
-                                    <button id="87" type="button" class="btn rounded-0 chess-square-dark" style="width: 75px; height: 75px;"></button>
-                                    <button id="88" type="button" class="btn rounded-0 chess-square-light" style="width: 75px; height: 75px;"></button>
+                                    <button id="81" onclick="chooseStarting(8, 1)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="82" onclick="chooseStarting(8, 2)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="83" onclick="chooseStarting(8, 3)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="84" onclick="chooseStarting(8, 4)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="85" onclick="chooseStarting(8, 5)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="86" onclick="chooseStarting(8, 6)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
+                                    <button id="87" onclick="chooseStarting(8, 7)" type="button" class="btn rounded-0 chess-square chess-square-dark"></button>
+                                    <button id="88" onclick="chooseStarting(8, 8)" type="button" class="btn rounded-0 chess-square chess-square-light"></button>
                                 </div>                                
                             </div>
 
                             <br><br>
-                        </div>                                              
-                    </div>                    
+
+                            <div class="d-flex flex-wrap justify-content-center" id="resetButtonDiv">
+                                <button type="button" class="btn btn-success mx-3" style="width:600px;" onclick="solve8Queens()"><b>Solve</b></button>
+                            </div><br>
+
+                            <div class="d-flex flex-wrap justify-content-center" id="resetButtonDiv">
+                                <button type="button" class="btn btn-danger" style="width:600px;" onclick="resetDisplay()"><b>Reset Tool</b></button>
+                            </div>
+
+                            <br><br>
+                        </div> 
+                    </div>
                 </div>
-
-                
-
             </div>
         </div>
+
+        <script src="beast_eight_queens.js"></script>
              
         <!-- Bootstrap -->        
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
