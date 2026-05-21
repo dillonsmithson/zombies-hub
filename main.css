@@ -1,18 +1,60 @@
-body {
-    /* background-image: linear-gradient(to right, #000428, #004e92);*/
-    /* linear-gradient(to right, #000000, #131313); */
+/* Main Elements */
+body {    
     color: white;
 }
 
-.bg-grad {
-    background-image: linear-gradient(to right, #000428, #004e92);
+.bg-grad {    
+    background:
+        radial-gradient(circle at 20% 15%, rgba(88, 101, 242, 0.18), transparent 40%),
+        radial-gradient(circle at 80% 25%, rgba(114, 137, 218, 0.14), transparent 45%),
+        radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0.9), transparent 60%),
+        linear-gradient(135deg, #0f141b 0%, #0d1117 50%, #0b0f16 100%);
+    min-height: 100vh;
+
+    color: #e6eaf2;
+}
+
+.bg-grad::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    opacity: 0.04;
+}
+
+.border-nav {
+    background-color: #ffffff;
+}
+
+.card-dark {
+    background:
+    radial-gradient(circle at top right, rgba(88, 101, 242, 0.22), transparent 30%),
+    linear-gradient(135deg, #181c25, #10131a);
+    color: #e6eaf2;
+    border-color: #0e0e0e !important;
+}
+
+.card-dark-secondary {
+    background: linear-gradient(145deg, #141a23, #10151d);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 18px;
+
+    color: #d7ddea;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.card-subtitle-dark {
+    color: #8b95aa !important;
 }
 
 .card {
     transition: transform .2s;
 }
 
-.card:hover {
+.card-interactable:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease-in-out;
     border-color: #007bff; /* Primary blue border */
@@ -22,6 +64,10 @@ body {
     z-index: 10;
 }
 
+
+/** Tool Specific Styling **/
+
+/* AotRT - Spelling Bee */
 a.word-select {
     color: black;
     text-decoration: none;
@@ -33,6 +79,8 @@ a.word-select:hover {
     cursor: pointer;
 }
 
+
+/* Beast - 8 Queens */
 .chess-square {            
     width: 75px;    
     height: 75px;
@@ -55,4 +103,378 @@ a.word-select:hover {
 .chess-square-dark:hover {
     background: #9a7db7;
     border: 2px solid black;    
+}
+
+
+/* Beast - Venom Upgrade (Used some code from mmmrkennedy for this) */
+.solver-grid-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.solver-grid-wrapper.is-fit {
+    overflow-x: visible;
+}
+
+.solver-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--solver-cols), var(--solver-cell-size));
+    grid-template-rows: repeat(var(--solver-rows), var(--solver-cell-size));
+    gap: var(--solver-cell-gap);
+}
+
+.solver-grid.is-framed {
+    --solver-frame-bg: #111;
+    --solver-frame-border: var(--color-border-medium);
+    --solver-frame-padding: var(--space-xs);
+    --solver-frame-border-width: 3px;
+
+    padding: var(--solver-frame-padding);
+    background: var(--solver-frame-bg);
+    border: var(--solver-frame-border-width) solid var(--solver-frame-border);
+    border-radius: 5px;
+}
+
+.solver-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--solver-cell-size);
+    height: var(--solver-cell-size);
+    background: var(--solver-cell-bg);
+    border: var(--solver-cell-border-width) solid var(--solver-cell-border);
+    border-radius: var(--solver-cell-radius);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.solver-cell:focus-visible {
+    outline: 2px solid var(--solver-accent);
+    outline-offset: 2px;
+}
+
+.solver-cell.is-locked,
+.solver-cell[aria-disabled="true"] {
+    cursor: default;
+}
+
+.solver-container--venom-maze {
+    --solver-cols: 6;
+    --solver-rows: 6;
+    --solver-cell-size: clamp(2.25rem, 13vw, 3.75rem);
+    --solver-cell-gap: 2px;
+}
+
+.solver-container--venom-maze .solver-grid.is-framed {
+    --solver-frame-bg: #529e38;
+    --solver-frame-border: var(--color-bg-primary);
+    --solver-frame-padding: 10px;
+    --solver-frame-border-width: 3px;
+    
+    position: relative;
+}
+
+.venom-cell {
+    position: relative;
+    background: #91c451;
+    border: 1px solid #2d5f2d;
+    cursor: pointer;
+}
+
+.venom-cell.is-target {
+    background: #5aba5a;
+}
+
+.venom-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.venom-piece {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.venom-piece.is-preview {
+    opacity: 0.6;
+}
+
+.venom-cell:hover {
+    background: #d4faa4;
+}
+
+/* Landing Page Elements (AI was used here, i suck at css) */
+.community-banner {
+    width: 100%;
+    min-height: 320px;
+    background:
+    radial-gradient(circle at top right, rgba(88, 101, 242, 0.22), transparent 30%),
+    linear-gradient(135deg, #181c25, #10131a);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;   /* horizontal centering */
+    align-items: center;       /* vertical centering */
+    text-align: center;        /* centers text */
+}
+
+.community-banner::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(88, 101, 242, 0.08);
+    border-radius: 50%;
+    top: -250px;
+    right: -120px;
+    filter: blur(20px);
+}
+
+.discord-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 24px;
+    background: rgba(88, 101, 242, 0.12);
+    border: 1px solid rgba(88, 101, 242, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8rem;
+    color: #7289da;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 30px rgba(88, 101, 242, 0.15);
+}
+
+.community-title {
+    font-size: clamp(2.5rem, 6vw, 4.8rem);
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 1.25rem;
+    letter-spacing: -1px;
+}
+
+.community-title span {
+    background: linear-gradient(90deg, #7289da, #9aa8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.community-text {
+    color: #b5bed1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.feature-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    color: #d6dbea;
+    margin: 0.35rem;
+    font-size: 0.95rem;
+}
+
+.join-btn {
+    background: linear-gradient(135deg, #5865f2, #7289da);
+    border: none;
+    padding: 1rem 1.8rem;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 10px 25px rgba(88, 101, 242, 0.35);
+    margin: 0 auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 250px;
+}
+
+.join-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #6a75ff, #8ca0ff);
+    box-shadow: 0 14px 30px rgba(88, 101, 242, 0.45);
+}
+
+.online-badge {    
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.06);
+    color: #c8d0e3;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    max-width: 325px;
+    margin: 0 auto 1.5rem auto;
+}
+
+@media (max-width: 768px) {
+    .community-banner {
+    text-align: center;
+    padding: 4rem 1.25rem;
+    }
+
+    .community-text {
+    margin: auto;
+    }
+
+    .feature-wrapper {
+    justify-content: center;
+    }
+}
+
+
+
+/* Card */
+.steam-click-card {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+
+    background: linear-gradient(145deg, #141a23, #10151d);
+    border: 1px solid rgba(255,255,255,0.06);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: 0.2s ease;
+}
+
+.steam-click-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(114, 137, 218, 0.3);
+    box-shadow: 0 14px 35px rgba(88,101,242,0.2);
+}
+
+/* Image */
+.steam-card-img {
+    width: 35%;
+    min-width: 120px;
+    max-width: 180px;
+    height: 100%;
+}
+
+.steam-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Content */
+.steam-card-body {
+    flex: 1;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.steam-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #e6eaf2;
+    margin: 0;
+}
+
+.steam-subtitle {
+    font-size: 0.85rem;
+    color: #9aa4b8;
+    margin-top: 2px;
+}
+
+.steam-desc {
+    font-size: 0.85rem;
+    color: #b4bfd6;
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+.social-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.social-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Base pill */
+.social-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 0.55rem 0.95rem;
+    border-radius: 999px;
+
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    color: #fff;
+
+    transition: 0.2s ease;
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* Hover lift */
+.social-pill:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+/* Steam */
+.social-pill.steam {
+    background: linear-gradient(135deg, #1b2838, #2a475e);
+}
+
+/* YouTube */
+.social-pill.youtube {
+    background: linear-gradient(135deg, #ff0000, #c20000);
+}
+
+/* TikTok */
+.social-pill.tiktok {
+    background: linear-gradient(135deg, #000000, #2a2a2a);
+}
+
+/* Instagram */
+.social-pill.instagram {
+    background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
+}
+
+/* Icon spacing tweak */
+.social-pill i {
+    font-size: 1rem;
 }
