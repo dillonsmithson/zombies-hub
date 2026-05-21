@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width", initial-scale="1">
         <title>ZombieSlayaMr's Infinite Warfare Tools</title>
-        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <link rel="icon" type="image/png" href="favicon.png">
 
         <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -18,23 +18,28 @@
         
         <div class="container text-center">
             
-            <!-- Landing Page Header -->
+            <!-- Main Grid Start -->
             <div class="row">
-                <!-- Navigation Panel Goes here... -->
+                
+                <!-- Navigation Panel -->
                 <div class="row">
                     <nav class="navbar fixed-top bg-dark navbar-expand-lg bg-body-tertiary border-bottom border-nav" data-bs-theme="dark">
                         <div class="container-fluid">
+
                             <a class="navbar-brand" href="#">
                                 <img src="imgs/Logo/zs_logo.png" alt="ZombieSlayaMr Logo" width="32" height="32">
                             </a>
                                 
+                            <!-- Button appears when viewport gets smaller -->
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
+
+                            <!-- Nav Items -->
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                     
-                                    <!-- Home (May change this later to something else) -->
+                                    <!-- Home Button -->
                                     <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#"><b>Home</b></a>
                                     </li>
@@ -44,66 +49,72 @@
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Shaolin Shuffle
                                     </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="pages/shaolin/shaolin_mahjong.html">Mahjong Tile Solver</a></li>
-                                        <li><a class="dropdown-item" href="#">Word Step Cheat Sheet</a></li>                                                                     
-                                    </ul>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="pages/shaolin/shaolin_mahjong.html">Mahjong Tile Solver</a></li>
+                                            <li><a class="dropdown-item" href="#">Word Step Cheat Sheet</a></li>                                                                     
+                                        </ul>
                                     </li>
 
 
-                                    <!-- Attack of the Radioactive Thing -->
+                                    <!-- Attack of the Radioactive Thing Tools -->
                                     <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Attack of the Radioactive Thing
                                     </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="pages/aotrt/aotrt_chemical.html">Chemical Step Solver</a></li>
-                                        <li><a class="dropdown-item" href="pages/aotrt/aotrt_spelling_bee.html">Spelling Bee Solver</a></li>                                    
-                                    </ul>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="pages/aotrt/aotrt_chemical.html">Chemical Step Solver</a></li>
+                                            <li><a class="dropdown-item" href="pages/aotrt/aotrt_spelling_bee.html">Spelling Bee Solver</a></li>                                    
+                                        </ul>
                                     </li>
 
-                                    <!-- Beast from Beyond -->
+                                    <!-- Beast from Beyond Tools -->
                                     <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Beast from Beyond
                                     </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Floppy Disk Cheat sheet</a></li>
-                                        <li><a class="dropdown-item" href="#">Odd One Out Cheat Sheet</a></li>                                    
-                                        <li><a class="dropdown-item" href="pages/beast/beast_eight_queens.html">Eight Queens Solver</a></li>
-                                        <li><a class="dropdown-item" href="pages/beast/beast_venom_solver.html">Venom Upgrade Solver</a></li>
-                                    </ul>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Floppy Disk Cheat sheet</a></li>
+                                            <li><a class="dropdown-item" href="#">Odd One Out Cheat Sheet</a></li>                                    
+                                            <li><a class="dropdown-item" href="pages/beast/beast_eight_queens.html">Eight Queens Solver</a></li>
+                                            <li><a class="dropdown-item" href="pages/beast/beast_venom_solver.html">Venom Upgrade Solver</a></li>
+                                        </ul>
                                     </li>                                    
                                 </ul>    
                                 
+                                <!-- Changelog (Might Remove) -->
                                 <ul class="nav navbar-nav ml-auto justify-content-end">
                                     <li class="nav-item">
                                         <a class="nav-link" href="pages/changelog/changelog.html">Changelog</a>
                                     </li>
                                 </ul>
+
                             </div>                            
                         </div>
                     </nav>
                 </div>
+                <!-- Navigation Panel End -->
 
-                <!-- Landing Page - Discord/Community Row -->           
+                <!-- Discord Card Start -->
                 <div class="row g-4 pt-5 align-items-center justify-content-center text-center">
                     <div class="col d-flex justify-content-center">
                         <div class="card shadow-lg border border-3 rounded-4 text-start card-dark" style="width: 125rem;">
                             <div class="card-body justify-content-center">
+                                
                                 <div class="online-badge justify-content-center text-center d-flex">
                                     <i class="bi bi-people-fill"></i>
                                     200+ Members • Growing Community!
-                                </div>                                                              
+                                </div>
+
                                 <h1 class="card-title community-title text-center pt-3">Join Our <span>Community</span></h1>                                
+                                
                                 <p class="community-text mb-4 text-center">
                                     Whether you need a full easter egg carry, help unlocking the Willard Wyler skin, or getting
                                     Director’s Cut — this is the place. Our community has helped hundreds of players since 2022, and
                                     there’s always someone online ready to jump in, answer questions, or squad up for a run.
-                                </p>
-                                <br>
+                                </p><br>                                
                                 
                                 <div class="feature-wrapper d-flex flex-wrap justify-content-center mb-4">
+                                    
                                     <div class="feature-pill">
                                     <i class="bi bi-check-circle-fill text-primary"></i>
                                     Community Focused
@@ -121,48 +132,51 @@
                                 </div>
 
                                 <a href="#" class="btn btn-primary join-btn">
+                                    
                                     <i class="bi bi-discord me-2"></i>
                                     Join the Discord
                                 </a><br>   
                             </div>
                         </div>
-                    </div>   
-                                                             
+                    </div>                                                                
                 </div>
+                <!-- Discord Card End -->
 
                 
 
-                <!-- Landing Page - Guides and About Me Section -->                
-                <div class="row row-cols-1 row-cols-md-2 g-4">
+                <!-- Steam Guide / About Me Section Start -->                
+                <div class="row row-cols-1 row-cols-md-2 g-4 pb-5">
                     <div class="col">
+
+                        <!-- Steam Guide Card -->
                         <div class="card h-100 rounded-4 card-dark-secondary">                        
-                        <div class="card-body text-center">
-                            <h4 class="card-title fw-bold">Link To My Steam Guides</h4>
-                            <h6 class="card-subtitle fst-italic">They're pretty great :)</h6>
-                            <br>                         
-                            
-                            <a class="steam-click-card"
-                            href="https://images.steamusercontent.com/ugc/2028358057313608224/D6AD7E21364AF412E4966BE5184DF25C514B12C3/"
-                            target="_blank">
+                            <div class="card-body text-center">
+                                <h4 class="card-title fw-bold">Link To My Steam Guides</h4>
+                                <h6 class="card-subtitle fst-italic">They're pretty great :)</h6>
+                                <br>                         
+                                
+                                <a class="steam-click-card"
+                                href="https://images.steamusercontent.com/ugc/2028358057313608224/D6AD7E21364AF412E4966BE5184DF25C514B12C3/"
+                                target="_blank">
 
-                                <div class="steam-card-img">
-                                    <img src="https://images.steamusercontent.com/ugc/2028358057313608224/D6AD7E21364AF412E4966BE5184DF25C514B12C3/" alt="image">
-                                </div>
-
-                                <div class="steam-card-body">
-                                    <div class="steam-title">ALL YOU NEED GUIDE TO IW ZOMBIES</div>
-                                    <div class="steam-subtitle">By: ZombieSlayaMr</div>
-                                    <div class="steam-desc">
-                                        The definitive guide series for Infinite Warfare Zombies! This guide is a singular hub containing links to all of my other guides for the game on steam. 
+                                    <div class="steam-card-img">
+                                        <img src="https://images.steamusercontent.com/ugc/2028358057313608224/D6AD7E21364AF412E4966BE5184DF25C514B12C3/" alt="image">
                                     </div>
-                                </div>
 
-                            </a>
-
-                            
-                        </div>
+                                    <div class="steam-card-body">
+                                        <div class="steam-title">ALL YOU NEED GUIDE TO IW ZOMBIES</div>
+                                        <div class="steam-subtitle">By: ZombieSlayaMr</div>
+                                        <div class="steam-desc">
+                                            The definitive guide series for Infinite Warfare Zombies! This guide is a singular hub containing links to all of my other guides for the game on steam. 
+                                        </div>
+                                    </div>
+                                </a>                            
+                            </div>
                         </div>
                     </div>
+                    <!-- Steam Guide Card End -->
+
+                    <!-- About Me Card -->
                     <div class="col">
                         <div class="card h-100 rounded-4 card-dark-secondary pb-2 pt-2">
                         <h4 class="card-title"><b>About Me</b></h4>
@@ -218,175 +232,189 @@
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
-                    </div>                    
+                    </div>
+                    <!-- About Me Card End-->
                 </div>
+                <!-- Steam Guide / About Me Section End-->
                 
+                <hr>
 
                 <!-- Cards for navigating to the separate tools individually -->
                 <div class="row g-4">
-                    <hr>
                     <h3>All Tools</h3>
-                    <div class="col">
-                        
 
+                    <!-- Row 1 Start -->
+                    <div class="col">                                                
                         <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                            <!-- Shaolin Shuffle - Mahjong Solver Card -->
                             <div class="col">
                                 <a href="pages/shaolin/shaolin_mahjong.html" class="text-decoration-none">
-                                <div class="card card-dark-secondary h-100">
-                                <img src="imgs/thumbnails/mahong_tile_thumb.png" class="card-img-top rounded-top-4" style="max-height: 300px;" alt="temp">
-                                <div class="card-body">
-                                    <h5 class="card-title">Mahjong Tile Solver</h5>
-                                    <h6 class="card-subtitle mb-2 text-body-secondary card-subtitle-dark">Shaolin Shuffle Skull Buster</h6>
-                                    <p class="card-text">
-                                        Permanent Online Calculator for that pesky Ghost N Skulls step since this specific tool seems to keep getting taken down everywhere else lol
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-body-secondary">Last updated today</small>
-                                </div>
-                                </div>
+                                    <div class="card card-dark-secondary h-100">
+                                        <img src="imgs/thumbnails/mahong_tile_thumb.png" class="card-img-top rounded-top-4" style="max-height: 300px;" alt="temp">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Mahjong Tile Solver</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary card-subtitle-dark">Shaolin Shuffle Skull Buster</h6>
+                                            <p class="card-text">
+                                                Permanent Online Calculator for that pesky Ghost N Skulls step since this specific tool seems to keep getting taken down everywhere else lol
+                                            </p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">Last updated today</small>
+                                        </div>
+                                    </div>
                                 </a>
                             </div>
 
-                            <div class="col">
-                                
+                            <!-- Shaolin Shuffle - Word Step Cheat Sheet Card -->
+                            <div class="col">                                
                                 <div class="card card-dark-secondary h-100">
-                                <img src="imgs/TempTest/temp_img.png" class="card-img-top rounded-top-4" style="max-height: 300px;" alt="temp">
-                                <div class="card-body">
-                                    <h5 class="card-title">Word Step Cheat Sheet</h5>
-                                    <h6 class="card-subtitle mb-2 text-body-secondary card-subtitle-dark">Shaolin Shuffle Main Quest</h6>
-                                    <p class="card-text">
-                                        Really good cheat sheet exists already for this, but I'd like to make an interactive tool as well cause why not lmao
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-body-secondary">Last updated today</small>
-                                </div>
+                                    <img src="imgs/TempTest/temp_img.png" class="card-img-top rounded-top-4" style="max-height: 300px;" alt="temp">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Word Step Cheat Sheet</h5>
+                                        <h6 class="card-subtitle mb-2 text-body-secondary card-subtitle-dark">Shaolin Shuffle Main Quest</h6>
+                                        <p class="card-text">
+                                            Really good cheat sheet exists already for this, but I'd like to make an interactive tool as well cause why not lmao
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-body-secondary">Last updated today</small>
+                                    </div>
                                 </div>
                             </div>
 
+                            <!-- AotRT - Chemical Step Solver Card -->
                             <div class="col">
                                 <a href="pages/aotrt/aotrt_chemical.html" class="text-decoration-none">
-                                <div class="card card-dark-secondary h-100">
-                                <img src="imgs/thumbnails/chemical_tool_thumb.png" class="card-img-top rounded-top-4" style="max-height: 300px;" alt="temp">
-                                <div class="card-body">
-                                    <h5 class="card-title">Chemical Step Solver</h5>
-                                    <h6 class="card-subtitle mb-2 text-body-secondary card-subtitle-dark">Attack of the Radioactive Thing Main Quest</h6>
-                                    <p class="card-text">
-                                        Most complicated Main Quest Easter Egg Step simpilified with this amazing tool!
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-body-secondary">Last updated today</small>
-                                </div>
-                                </div>
+                                    <div class="card card-dark-secondary h-100">
+                                        <img src="imgs/thumbnails/chemical_tool_thumb.png" class="card-img-top rounded-top-4" style="max-height: 300px;" alt="temp">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Chemical Step Solver</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary card-subtitle-dark">Attack of the Radioactive Thing Main Quest</h6>
+                                            <p class="card-text">
+                                                Most complicated Main Quest Easter Egg Step simpilified with this amazing tool!
+                                            </p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">Last updated today</small>
+                                        </div>
+                                    </div>
                                 </a>
                             </div>                            
                         </div>                                                    
                     </div>
                 </div>
 
+                <!-- Row 2 Start -->
                 <div class="row g-4">                    
-                    <div class="col">                        
-                        <div class="row row-cols-1 row-cols-md-3 g-4">                            
+                    <div class="col">
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                            <!-- AotRT - Spelling Bee Solver Card -->
                             <div class="col">
                                 <a href="pages/aotrt/aotrt_spelling_bee.html" class="text-decoration-none">
-                                <div class="card card-dark-secondary h-100">
-                                <img src="imgs/thumbnails/spelling_bee_thumb.png" class="card-img-top rounded-top-4" style="max-height: 300px;" alt="temp">
-                                <div class="card-body">
-                                    <h5 class="card-title">Spelling Bee Solver</h5>
-                                    <h6 class="card-subtitle mb-2 text-body-secondary card-subtitle-dark">Attack of the Radioactive Thing Skull Hop</h6>
-                                    <p class="card-text">
-                                        This step is not as impossible as it seems, especially with this solver!
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-body-secondary">Last updated today</small>
-                                </div>
-                                </div>
+                                    <div class="card card-dark-secondary h-100">
+                                        <img src="imgs/thumbnails/spelling_bee_thumb.png" class="card-img-top rounded-top-4" style="max-height: 300px;" alt="temp">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Spelling Bee Solver</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary card-subtitle-dark">Attack of the Radioactive Thing Skull Hop</h6>
+                                            <p class="card-text">
+                                                This step is not as impossible as it seems, especially with this solver!
+                                            </p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">Last updated today</small>
+                                        </div>
+                                    </div>
                                 </a>
                             </div>
 
+                            <!-- Beast - Floppy Cheat Sheet Card -->
                             <div class="col">
                                 <div class="card card-dark-secondary h-100">
-                                <img src="imgs/TempTest/temp_img.png" class="card-img-top rounded-top-4" style="max-height: 300px;" alt="temp">
-                                <div class="card-body">
-                                    <h5 class="card-title">Floppy Disk Cheat Sheet</h5>
-                                    <h6 class="card-subtitle mb-2 text-body-secondary card-subtitle-dark">Beast From Beyond Main Quest</h6>
-                                    <p class="card-text">
-                                        Yes, we're adding cheat sheets for this too. Also will include every single possible combination for the floppy disks, cause yeah that exists.
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-body-secondary">Last updated today</small>
-                                </div>
+                                    <img src="imgs/TempTest/temp_img.png" class="card-img-top rounded-top-4" style="max-height: 300px;" alt="temp">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Floppy Disk Cheat Sheet</h5>
+                                        <h6 class="card-subtitle mb-2 text-body-secondary card-subtitle-dark">Beast From Beyond Main Quest</h6>
+                                        <p class="card-text">
+                                            Yes, we're adding cheat sheets for this too. Also will include every single possible combination for the floppy disks, cause yeah that exists.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-body-secondary">Last updated today</small>
+                                    </div>
                                 </div>
                             </div>
                             
+                            <!-- Beast - Venom Upgrade Quest Card -->
                             <div class="col">
                                 <div class="card card-dark-secondary h-100">
-                                <img src="imgs/thumbnails/venom_upgrade_thumb.png" class="card-img-top rounded-top-4" style="max-height: 300px;" alt="temp">
-                                <div class="card-body">
-                                    <h5 class="card-title">Venom Upgrade Quest</h5>
-                                    <h6 class="card-subtitle mb-2 text-body-secondary card-subtitle-dark">Beast From Beyond Misc.</h6>
-                                    <p class="card-text">
-                                        Why in the F*** would IW make this wonder weapon upgrade quest this complicated XD
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-body-secondary">Last updated today</small>
-                                </div>
+                                    <img src="imgs/thumbnails/venom_upgrade_thumb.png" class="card-img-top rounded-top-4" style="max-height: 300px;" alt="temp">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Venom Upgrade Quest</h5>
+                                        <h6 class="card-subtitle mb-2 text-body-secondary card-subtitle-dark">Beast From Beyond Misc.</h6>
+                                        <p class="card-text">
+                                            Why in the F*** would IW make this wonder weapon upgrade quest this complicated XD
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-body-secondary">Last updated today</small>
+                                    </div>
                                 </div>
                             </div>
                         </div>                                                    
                     </div>
                 </div>
 
+                <!-- Row 3 -->
                 <div class="row g-4 pb-5">                    
                     <div class="col">                        
                         <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                            <!-- Beast - Odd One Out Cheat Sheet Card -->
                             <div class="col">
                                 <div class="card card-dark-secondary h-100">
-                                <img src="imgs/TempTest/temp_img.png" class="card-img-top rounded-top-4" style="max-height: 300px;" alt="temp">
-                                <div class="card-body">
-                                    <h5 class="card-title">Odd One Out Cheat Sheet</h5>
-                                    <h6 class="card-subtitle mb-2 text-body-secondary card-subtitle-dark">Beast From Beyond Skull Breaker</h6>
-                                    <p class="card-text">
-                                        Simple cheat sheet for a fairly simple step, but still wanted to include it.
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-body-secondary">Last updated today</small>
-                                </div>
+                                    <img src="imgs/TempTest/temp_img.png" class="card-img-top rounded-top-4" style="max-height: 300px;" alt="temp">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Odd One Out Cheat Sheet</h5>
+                                        <h6 class="card-subtitle mb-2 text-body-secondary card-subtitle-dark">Beast From Beyond Skull Breaker</h6>
+                                        <p class="card-text">
+                                            Simple cheat sheet for a fairly simple step, but still wanted to include it.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-body-secondary">Last updated today</small>
+                                    </div>
                                 </div>
                             </div>
                             
+                            <!-- Beast - 8 Queens Solver Card -->
                             <div class="col">
                                 <a href="pages/beast/beast_eight_queens.html" class="text-decoration-none">
-                                <div class="card card-dark-secondary h-100">
-                                <img src="imgs/thumbnails/eight_queens_thumb.png" class="card-img-top rounded-top-4" style="max-height: 300px;" alt="temp">
-                                <div class="card-body">
-                                    <h5 class="card-title">Eight Queens Solver</h5>
-                                    <h6 class="card-subtitle mb-2 text-body-secondary card-subtitle-dark">Beast From Beyond Skull Breaker</h6>
-                                    <p class="card-text">
-                                        My favorite puzzle in the game and made simple with this tool!
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-body-secondary">Last updated today</small>
-                                </div>
-                                </div>
+                                    <div class="card card-dark-secondary h-100">
+                                        <img src="imgs/thumbnails/eight_queens_thumb.png" class="card-img-top rounded-top-4" style="max-height: 300px;" alt="temp">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Eight Queens Solver</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary card-subtitle-dark">Beast From Beyond Skull Breaker</h6>
+                                            <p class="card-text">
+                                                My favorite puzzle in the game and made simple with this tool!
+                                            </p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">Last updated today</small>
+                                        </div>
+                                    </div>
                                 </a>
                             </div>                        
-                        </div>                                                    
+                        </div>
+                                                                        
                     </div>
                 </div>
-
+                <!-- End Row 3 -->
             </div>
-        </div>
+            <!-- End Grid-->
+        </div>        
              
         <!-- Bootstrap -->        
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
