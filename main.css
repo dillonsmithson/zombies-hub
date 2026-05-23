@@ -229,7 +229,7 @@ a.word-select:hover {
 /* Base button */
 .color-button-row {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     align-items: center;
 }
 
@@ -238,7 +238,7 @@ a.word-select:hover {
     width: 34px;
     height: 34px;
 
-    border: 1px solid black;
+    border: 3px solid #7289da;
     border-radius: 10px;
 
     cursor: pointer;
@@ -263,6 +263,7 @@ a.word-select:hover {
     opacity: 0.45;    
     transform: none;
     box-shadow: none;
+    border: 1px solid black;
 }
 
 /* RED */
@@ -314,7 +315,7 @@ a.word-select:hover {
     background: #212529;
     box-shadow:
         0 0 14px rgba(0, 0, 0, 0.45),
-        0 4px 10px rgba(0,0,0,0.35);
+        0 4px 10px rgba(0,0,0,0.35);    
 }
 .btn-black.active {
     background: #000000;
