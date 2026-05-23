@@ -55,13 +55,9 @@ body {
 }
 
 .card-interactable:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
-    border-color: #007bff; /* Primary blue border */
-    background-color: #f8f9fa;
-
-    transition: scale(10);
-    z-index: 10;
+    transform: translateY(-4px);
+    border-color: rgba(114, 137, 218, 0.3);
+    box-shadow: 0 14px 35px rgba(88,101,242,0.2);
 }
 
 
@@ -205,6 +201,7 @@ a.word-select:hover {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    z-index: 20;
 }
 
 .venom-piece.is-preview {
@@ -214,6 +211,236 @@ a.word-select:hover {
 .venom-cell:hover {
     background: #d4faa4;
 }
+
+.venom-piece-button {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+
+
+.button-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Base button */
+.color-button-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Base square button */
+.color-btn {
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.18s ease;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+}
+
+.color-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+}
+
+.color-btn:active,
+.color-btn.active {
+    transform: scale(0.94);
+}
+
+/* Disabled state */
+.color-btn:disabled,
+.color-btn.disabled {
+    opacity: 0.45;    
+    transform: none;
+    box-shadow: none;
+}
+
+/* RED */
+.btn-red {
+    background: #dc3545;
+    box-shadow:
+        0 0 14px rgba(220, 53, 69, 0.35),
+        0 4px 10px rgba(0,0,0,0.35);
+}
+.btn-red.active {
+    background: #b02a37;
+}
+.btn-red:disabled {
+    background: #6e2a31;
+}
+
+/* BLUE */
+.btn-blue {
+    background: #0d6efd;
+    box-shadow:
+        0 0 14px rgba(13, 110, 253, 0.35),
+        0 4px 10px rgba(0,0,0,0.35);
+}
+.btn-blue.active {
+    background: #0a58ca;
+}
+.btn-blue:disabled {
+    background: #314c75;
+}
+
+/* YELLOW */
+.btn-yellow {
+    background: #ffc107;
+    box-shadow:
+        0 0 14px rgba(255, 193, 7, 0.35),
+        0 4px 10px rgba(0,0,0,0.35);
+}
+.btn-yellow.active {
+    background: #d39e00;
+    color: #111;
+}
+.btn-yellow:disabled {
+    background: #75662c;
+    color: #222;
+}
+
+/* BLACK */
+.btn-black {
+    background: #212529;
+    box-shadow:
+        0 0 14px rgba(0, 0, 0, 0.45),
+        0 4px 10px rgba(0,0,0,0.35);
+}
+.btn-black.active {
+    background: #000000;
+}
+.btn-black:disabled {
+    background: #4a4f55;
+}
+
+/* WHITE */
+.btn-white {
+    background: #f8f9fa;
+    box-shadow:
+        0 0 14px rgba(255,255,255,0.22),
+        0 4px 10px rgba(0,0,0,0.35);
+}
+.btn-white.active {
+    background: #dfe2e6;
+    color: #111;
+}
+.btn-white:disabled {
+    background: #8c9197;
+    color: #444;
+}
+
+/* GREEN */
+.btn-green {
+    background: #198754;
+    box-shadow:
+        0 0 14px rgba(25, 135, 84, 0.35),
+        0 4px 10px rgba(0,0,0,0.35);
+}
+.btn-green.active {
+    background: #146c43;
+}
+.btn-green:disabled {
+    background: #355e4b;
+}
+
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: fit-content;
+}
+
+/* Label */
+.counter-label {
+    color: #000000;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+
+    letter-spacing: 0.3px;
+}
+
+/* Counter */
+.counter-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: fit-content;
+
+    padding: 8px;
+
+    border-radius: 16px;
+
+    background: linear-gradient(145deg, #141a23, #10151d);
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.35),
+        0 0 18px rgba(88,101,242,0.08);
+}
+
+/* Buttons */
+.counter-btn {
+    width: 36px;
+    height: 36px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.05);
+    color: #d7ddea;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.18s ease;
+}
+
+.counter-btn:hover:not(:disabled) {
+    background: rgba(88,101,242,0.18);
+    transform: translateY(-1px);
+}
+
+.counter-btn:disabled {
+    opacity: 0.35;    
+}
+
+/* Number Display */
+.counter-value {
+    min-width: 42px;
+
+    text-align: center;
+
+    color: #e6eaf2;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.button-result-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;    
+}
+
 
 /* Landing Page Elements (AI was used here, i suck at css) */
 .community-banner {

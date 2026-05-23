@@ -89,58 +89,200 @@
                 <div class="row g-4 pt-5">
                     <div class="col d-flex justify-content-center">
                         <div class="card shadow-lg border-dark border-3 rounded-4 text-start" style="width: 125rem;">
-                            <br>
+                            <div class="card-body justify-content-left">                                
+                                <h3 class="card-title text-center">Venom Upgrade Solvers</h3>                                
+                                <h6 class="card-subtitle text-center mb-2 text-body-secondary">Beast from Beyond Wonder Weapon</h6>    
+                                <br>                            
+                                <p class="card-text">
+                                    This quest is pretty complicated, so I plan on detailing how to do the entire quest on this page. 
+                                    <br><br>
+                                    <b>Part 1</b>, you'll be completing the steps to get the Venom X from the lockup in the main chamber. You'll start by interacting with a fuse 
+                                    box, choosing the correct color fuse to complete the step, which this tool will help with. Then you'll need to trap a zombie and complete 4
+                                    mazes using the maze solver below.
+                                    <br><br>
+                                    <b>Part 2/3</b> you'll be going through and decoding morse code for both the Venom Y and Venom Z.                                                                         
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+                <div class="row g-4 pt-1">
+                    <div class="col d-flex justify-content-center">
+                        <div class="card shadow-lg border-dark border-3 rounded-4 text-start" style="width: 125rem;">
+                            <div class="card-body justify-content-center">                                
+                                <h3 class="card-title text-center"><b>Fuse Box Solver</b></h3><br>
+                                
+                                <div class="d-flex justify-content-center align-items-center pb-5">
+                                    <div class="counter-container d-flex justify-content-center align-items-center">
+
+                                        <div class="counter-label">
+                                            Number of Buttons
+                                        </div>
+
+                                        <div class="counter-wrapper">
+                                            <button class="counter-btn" id="decreaseBtn"> − </button>
+                                            <div class="counter-value" id="counterValue"> 3 </div>
+                                            <button class="counter-btn" id="increaseBtn"> + </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div id="fuse_row_1" class="color-button-row d-flex justify-content-center pb-3">
+                                    <button id="row1red"    onclick="selectButton(1, 'red')" class="color-btn btn-red"></button>
+                                    <button id="row1blue"   onclick="selectButton(1, 'blue')" class="color-btn btn-blue disabled"></button>
+                                    <button id="row1yellow" onclick="selectButton(1, 'yellow')" class="color-btn btn-yellow disabled"></button>
+                                    <button id="row1black"  onclick="selectButton(1, 'black')" class="color-btn btn-black disabled"></button>
+                                    <button id="row1white"  onclick="selectButton(1, 'white')" class="color-btn btn-white disabled"></button>
+                                    <button id="row1green"  onclick="selectButton(1, 'green')" class="color-btn btn-green disabled"></button>
+                                </div>
+                                                                
+                                <div id="fuse_row_2" class="color-button-row d-flex justify-content-center pb-3">
+                                    <button id="row2red"    onclick="selectButton(2, 'red')" class="color-btn btn-red"></button>
+                                    <button id="row2blue"   onclick="selectButton(2, 'blue')" class="color-btn btn-blue disabled"></button>
+                                    <button id="row2yellow" onclick="selectButton(2, 'yellow')" class="color-btn btn-yellow disabled"></button>
+                                    <button id="row2black"  onclick="selectButton(2, 'black')" class="color-btn btn-black disabled"></button>
+                                    <button id="row2white"  onclick="selectButton(2, 'white')" class="color-btn btn-white disabled"></button>
+                                    <button id="row2green"  onclick="selectButton(2, 'green')" class="color-btn btn-green disabled"></button>
+                                </div>
+                                
+                                <div id="fuse_row_3" class="color-button-row d-flex justify-content-center pb-3">
+                                    <button id="row3red"    onclick="selectButton(3, 'red')" class="color-btn btn-red"></button>
+                                    <button id="row3blue"   onclick="selectButton(3, 'blue')" class="color-btn btn-blue disabled"></button>
+                                    <button id="row3yellow" onclick="selectButton(3, 'yellow')" class="color-btn btn-yellow disabled"></button>
+                                    <button id="row3black"  onclick="selectButton(3, 'black')" class="color-btn btn-black disabled"></button>
+                                    <button id="row3white"  onclick="selectButton(3, 'white')" class="color-btn btn-white disabled"></button>
+                                    <button id="row3green"  onclick="selectButton(3, 'green')" class="color-btn btn-green disabled"></button>
+                                </div>
+
+                                
+                                <div id="fuse_row_4" hidden>
+                                    <div id="fuse_row_4" class="color-button-row d-flex justify-content-center pb-3" hidden>
+                                        <button id="row4red"    onclick="selectButton(4, 'red')" class="color-btn btn-red"></button>
+                                        <button id="row4blue"   onclick="selectButton(4, 'blue')" class="color-btn btn-blue disabled"></button>
+                                        <button id="row4yellow" onclick="selectButton(4, 'yellow')" class="color-btn btn-yellow disabled"></button>
+                                        <button id="row4black"  onclick="selectButton(4, 'black')" class="color-btn btn-black disabled"></button>
+                                        <button id="row4white"  onclick="selectButton(4, 'white')" class="color-btn btn-white disabled"></button>
+                                        <button id="row4green"  onclick="selectButton(4, 'green')" class="color-btn btn-green disabled"></button>
+                                    </div>
+                                </div>
+
+                                <div id="fuse_row_5" hidden>
+                                    <div class="color-button-row d-flex justify-content-center pb-3" hidden>
+                                        <button id="row5red"    onclick="selectButton(5, 'red')" class="color-btn btn-red"></button>
+                                        <button id="row5blue"   onclick="selectButton(5, 'blue')" class="color-btn btn-blue disabled"></button>
+                                        <button id="row5yellow" onclick="selectButton(5, 'yellow')" class="color-btn btn-yellow disabled"></button>
+                                        <button id="row5black"  onclick="selectButton(5, 'black')" class="color-btn btn-black disabled"></button>
+                                        <button id="row5white"  onclick="selectButton(5, 'white')" class="color-btn btn-white disabled"></button>
+                                        <button id="row5green"  onclick="selectButton(5, 'green')" class="color-btn btn-green disabled"></button>
+                                    </div>
+                                </div>
+
+                                <div id="fuse_row_6" hidden>
+                                    <div class="color-button-row d-flex justify-content-center pb-3" >
+                                        <button id="row6red"    onclick="selectButton(6, 'red')" class="color-btn btn-red"></button>
+                                        <button id="row6blue"   onclick="selectButton(6, 'blue')" class="color-btn btn-blue disabled"></button>
+                                        <button id="row6yellow" onclick="selectButton(6, 'yellow')" class="color-btn btn-yellow disabled"></button>
+                                        <button id="row6black"  onclick="selectButton(6, 'black')" class="color-btn btn-black disabled"></button>
+                                        <button id="row6white"  onclick="selectButton(6, 'white')" class="color-btn btn-white disabled"></button>
+                                        <button id="row6green"  onclick="selectButton(6, 'green')" class="color-btn btn-green disabled"></button>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-center pt-3">
+                                    <span id="fuse-solution-text" class="badge rounded-pill text-bg-dark p-3 button-result-text">Push Button 1</span>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row g-4 pb-5">
+                    <div class="col d-flex justify-content-center">
+                        <div class="card shadow-lg border-dark border-3 rounded-4 text-start justify-content-center" style="width: 125rem;">
                             
+                            <br>
                             <h3 style="text-align: center;"><b>Maze Solver</b></h3>
-                            <div class="solver-container solver-container--venom-maze">
-                                <div class="solver-grid-wrapper is-fit">
-                                    <div class="solver-grid is-framed">
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
+                            
+                            <br>
+                            <div class="d-flex flex-wrap justify-content-center" id="pieceSelectButtonDiv">
+                                <span>
+                                    <button id="start_piece_select" type="button" class="btn btn-dark mx-3" onclick="setCurrentPiece(0)">
+                                        <img class="venom-piece-button" src="../../imgs/venom_upgrade/start_square.png">
+                                        Start Piece
+                                    </button>
+                                    <button id="end_piece_select" type="button" class="btn btn-dark mx-3" onclick="setCurrentPiece(1)">
+                                        <img class="venom-piece-button" src="../../imgs/venom_upgrade/ending_diamond.png">
+                                        End Piece
+                                    </button>
+                                </span>
+                            </div><br>
 
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>
-                                        <div class="venom-cell"></div>                                        
+                            <div id="venom-error-panel" hidden>
+                                <div class="d-flex justify-content-center">
+                                    <div class="alert alert-danger d-flex align-items-center" role="alert" style="max-width: 700px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                        </svg>
+                                        <div id="venom-maze-error">
+                                            <b>Error:</b> You need to select a piece
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                                                        
+                            <div class="solver-container solver-container--venom-maze">
+                                <div class="solver-grid-wrapper is-fit">
+                                    <div class="solver-grid is-framed">                                        
+                                        <div id="00" class="venom-cell" onclick="setPiece(0, 0)"></div>
+                                        <div id="01" class="venom-cell" onclick="setPiece(0, 1)"></div>
+                                        <div id="02" class="venom-cell" onclick="setPiece(0, 2)"></div>
+                                        <div id="03" class="venom-cell" onclick="setPiece(0, 3)"></div>
+                                        <div id="04" class="venom-cell" onclick="setPiece(0, 4)"></div>
+                                        <div id="05" class="venom-cell" onclick="setPiece(0, 5)"></div>
 
+                                        <div id="10" class="venom-cell" onclick="setPiece(1, 0)"></div>
+                                        <div id="11" class="venom-cell" onclick="setPiece(1, 1)"></div>
+                                        <div id="12" class="venom-cell" onclick="setPiece(1, 2)"></div>
+                                        <div id="13" class="venom-cell" onclick="setPiece(1, 3)"></div>
+                                        <div id="14" class="venom-cell" onclick="setPiece(1, 4)"></div>
+                                        <div id="15" class="venom-cell" onclick="setPiece(1, 5)"></div>
 
+                                        <div id="20" class="venom-cell" onclick="setPiece(2, 0)"></div>
+                                        <div id="21" class="venom-cell" onclick="setPiece(2, 1)"></div>
+                                        <div id="22" class="venom-cell" onclick="setPiece(2, 2)"></div>
+                                        <div id="23" class="venom-cell" onclick="setPiece(2, 3)"></div>
+                                        <div id="24" class="venom-cell" onclick="setPiece(2, 4)"></div>
+                                        <div id="25" class="venom-cell" onclick="setPiece(2, 5)"></div>
+
+                                        <div id="30" class="venom-cell" onclick="setPiece(3, 0)"></div>
+                                        <div id="31" class="venom-cell" onclick="setPiece(3, 1)"></div>
+                                        <div id="32" class="venom-cell" onclick="setPiece(3, 2)"></div>
+                                        <div id="33" class="venom-cell" onclick="setPiece(3, 3)"></div>
+                                        <div id="34" class="venom-cell" onclick="setPiece(3, 4)"></div>
+                                        <div id="35" class="venom-cell" onclick="setPiece(3, 5)"></div>
+
+                                        <div id="40" class="venom-cell" onclick="setPiece(4, 0)"></div>
+                                        <div id="41" class="venom-cell" onclick="setPiece(4, 1)"></div>
+                                        <div id="42" class="venom-cell" onclick="setPiece(4, 2)"></div>
+                                        <div id="43" class="venom-cell" onclick="setPiece(4, 3)"></div>
+                                        <div id="44" class="venom-cell" onclick="setPiece(4, 4)"></div>
+                                        <div id="45" class="venom-cell" onclick="setPiece(4, 5)"></div>
+
+                                        <div id="50" class="venom-cell" onclick="setPiece(5, 0)"></div>
+                                        <div id="51" class="venom-cell" onclick="setPiece(5, 1)"></div>
+                                        <div id="52" class="venom-cell" onclick="setPiece(5, 2)"></div>
+                                        <div id="53" class="venom-cell" onclick="setPiece(5, 3)"></div>
+                                        <div id="54" class="venom-cell" onclick="setPiece(5, 4)"></div>
+                                        <div id="55" class="venom-cell" onclick="setPiece(5, 5)"></div>                                        
+
+                                        <canvas id="venom-solver-canvas" class="venom-canvas"></canvas>
+                                    </div>                                    
+                                </div>                                
+                            </div>                            
                             <br>
                         </div>
                     </div>            
@@ -148,6 +290,8 @@
             </div>
         </div>
              
+        <script src="beast_venom_maze_solver.js"></script>
+        <script src="beast_venom_button_solver.js"></script>
         <!-- Bootstrap -->        
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>        
