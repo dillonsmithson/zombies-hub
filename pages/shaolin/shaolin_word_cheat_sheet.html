@@ -48,12 +48,12 @@
 
                                     <!-- Shaolin Shuffle Tools -->
                                     <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Shaolin Shuffle
+                                    <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <b>Shaolin Shuffle</b>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="../shaolin/shaolin_mahjong.html">Mahjong Tile Solver</a></li>
-                                        <li><a class="dropdown-item" href="../shaolin/shaolin_word_cheat_sheet.html">Word Step Cheat Sheet</a></li>                                                                 
+                                        <li><a class="dropdown-item" href=""><b>Word Step Cheat Sheet</b></a></li>                                                                  
                                     </ul>
                                     </li>
 
@@ -85,7 +85,7 @@
                                 
                                 <ul class="nav navbar-nav ml-auto justify-content-end">
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="#"><b>Changelog</b></a>
+                                        <a class="nav-link" href="../changelog/changelog.html">Changelog</a>
                                     </li>
                                 </ul>
                             </div>
@@ -94,9 +94,75 @@
                 </div>
 
                 <!-- Content Here -->
+
+                <div class="row g-4 pt-5">
+                    <div class="col d-flex justify-content-center">
+                        <div class="card shadow-lg border-dark border-3 rounded-4 text-start" style="width: 125rem;">
+                            <div class="card-body justify-content-left">                                
+                                <h3 class="card-title text-center">Word Cheat Sheet</h3>                                
+                                <h6 class="card-subtitle text-center mb-2 text-body-secondary">Shaolin Shuffle Main Quest</h6>    
+                                <br>                            
+                                <p class="card-text">
+                                    During the Main Quest, you'll need to guess a word that appears on a wall on the Rooftop of the Disco Inferno.
+                                    This step requires you to use the cipher alphabet to guess the letters for the word on the wall.
+                                    <br><br>
+
+                                    Below is a graphic of the cipher alphabet deciphered, as well as the complete wordlist. However, there's also an interactive
+                                    version of the cheat sheet to better help with the step without having to constantly recheck the graphic. 
+                                    <br><br>
+
+                                    Just add your first 
+                                    letter, then the word list will reduce down to the possible words remaining. You can also add you symbols you have on the rooftop
+                                    and it will futher reduce. Once you guess a letter, add it to the tool and it'll keep reducing the wordlist till it know's for sure
+                                    what your word is. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row g-4">
+                    <div class="col d-flex justify-content-center">
+                        <div class="card shadow-lg border-dark border-3 rounded-4 text-start" style="width: 125rem;">
+                            <div class="card-body justify-content-left">                                
+                                <a href="../../imgs/shaolin_shuffle_word_cheat_sheet_full_size.png" target="_blank">
+                                    <img src="../../imgs/shaolin_shuffle_word_cheat_sheet_full_size.png" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 pb-5">
+                    <div class="col d-flex justify-content-center">
+                        <div class="card shadow-lg border-dark border-3 rounded-4 text-start" style="width: 125rem;">
+                            <div class="card-body justify-content-left">                                
+                                <h3 class="card-title text-center">Word Step Solver</h3>
+                                
+                                <br>
+                                
+                                <div class="d-flex justify-content-center">
+                                    <div class="alert alert-info d-flex align-items-center" role="alert" style="max-width: 700px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                        </svg>
+                                        <div id="tool-under-constructor-message">
+                                            <b>Sorry:</b> This tool is still being worked on :) For now, use the cheat sheet above to solve the step!
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
              
+        <script src="shaolin_word_cheat_sheet.js"></script>
+
         <!-- Bootstrap -->        
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>        
